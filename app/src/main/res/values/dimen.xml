@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="vertical_bar_width">2dp</dimen>
+    <dimen name="padding">4dp</dimen>
+    <dimen name="margin">4dp</dimen>
+    <dimen name="text_size">28sp</dimen>
+    <dimen name="image_size">64dp</dimen>
+    <dimen name="text_goal_size">56sp</dimen>
+    <dimen name="text_foul_size">56sp</dimen>
+</resources>

@@ -1,172 +1,191 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:fillViewport="true"
     tools:context="MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:background="@color/primary_light"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="U Cluj"
-                android:textColor="#FFFFFF"
-                android:textSize="28sp" />
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/UClujView"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/u_cluj" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/u_cluj_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="@dimen/padding"
+                        android:text="@string/u_cluj"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_size" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#2196F3"
-                android:onClick="addOneGoalForUCluj"
-                android:text="Goal" />
+                    <ImageView
+                        android:id="@+id/UClujView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/u_cluj" />
 
-            <TextView
-                android:id="@+id/u_cluj_fouls"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
+                    <TextView
+                        android:id="@+id/u_cluj_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:padding="@dimen/padding"
+                        android:text="@string/initial_value"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_goal_size" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#F44336"
-                android:onClick="addOneFoulForUCluj"
-                android:text="Foul" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin"
+                        android:backgroundTint="@color/primary"
+                        android:onClick="addOneGoalForUCluj"
+                        android:text="@string/goal" />
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/u_cluj_fouls"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:padding="@dimen/padding"
+                        android:text="@string/initial_value"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_foul_size" />
 
-        <View
-            android:layout_width="2dp"
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin"
+                        android:backgroundTint="@color/accent"
+                        android:onClick="addOneFoulForUCluj"
+                        android:text="@string/foul" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/vertical_bar_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:background="@android:color/white">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="@dimen/padding"
+                        android:text="@string/cfr_cluj"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_size" />
+
+                    <ImageView
+                        android:id="@+id/CFRClujVIew"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/cfr_cluj" />
+
+                    <TextView
+                        android:id="@+id/cfr_cluj_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:padding="@dimen/padding"
+                        android:text="@string/initial_value"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_goal_size" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin"
+                        android:backgroundTint="@color/primary"
+                        android:onClick="addOneGoalForCFRCluj"
+                        android:text="@string/goal" />
+
+                    <TextView
+                        android:id="@+id/cfr_cluj_fouls"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:padding="@dimen/padding"
+                        android:text="@string/initial_value"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_foul_size" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin"
+                        android:backgroundTint="@color/accent"
+                        android:onClick="addOneFoulForCFRCluj"
+                        android:text="@string/foul" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/white">
-
-        </View>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="CFR Cluj"
-                android:textColor="#FFFFFF"
-                android:textSize="28sp" />
-
-            <ImageView
-                android:id="@+id/CFRClujVIew"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/cfr_cluj" />
-
-            <TextView
-                android:id="@+id/cfr_cluj_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
-
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#2196F3"
-                android:onClick="addOneGoalForCFRCluj"
-                android:text="Goal" />
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/layout_margin"
+                android:backgroundTint="@color/icons"
+                android:onClick="reset"
+                android:text="@string/reset" />
+        </RelativeLayout>
 
-            <TextView
-                android:id="@+id/cfr_cluj_fouls"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#F44336"
-                android:onClick="addOneFoulForCFRCluj"
-                android:text="Foul" />
-        </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="32dp"
-        android:backgroundTint="#FF9800"
-        android:onClick="reset"
-        android:text="Reset" />
-
-</RelativeLayout>
+</ScrollView>
