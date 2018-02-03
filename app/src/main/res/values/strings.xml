@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Football Counter App</string>
+    <string name="u_cluj">U Cluj</string>
+    <string name="cfr_cluj">CFR Cluj</string>
+    <string name="goal">Goal</string>
+    <string name="foul">Foul</string>
+    <string name="reset">Reset</string>
+    <string name="initial_value">0</string>
 </resources>
